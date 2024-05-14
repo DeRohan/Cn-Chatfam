@@ -205,7 +205,7 @@ const App = () => {
 
   function renderMessages(message, index) {
     if (message.type === "file") {
-      const blob = new Blob([message.body], { type: message.filename });
+      const blob = new Blob([message.body], { type: message.type });
       if (message.id === yourID) {
         return (
           <MyRow key={index}>
